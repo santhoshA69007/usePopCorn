@@ -402,10 +402,10 @@ function WatchedMovieList({watched,handleDeleteWatched}) {
   console.log(bla)
 
  return <ul className="list">
-  {watched.map((movie) => (
+  {watched.length>0?watched.map((movie) => (
     <WatchedMovie movie={movie} key={movie.imdbId} handleDeleteWatched={handleDeleteWatched}/>
    
-  ))}
+  )):""}
 </ul>
   
 }
